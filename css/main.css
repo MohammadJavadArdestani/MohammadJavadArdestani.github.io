@@ -152,7 +152,7 @@ a{
     color: #000;
     text-align: center;
     border-bottom: 1px solid #CCC;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .scroll-menu .scroll-links.last-link{
     border-bottom: none;
