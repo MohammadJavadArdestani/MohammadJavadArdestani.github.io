@@ -5,6 +5,7 @@
     font-feature-settings: "smcp";
 }
 
+
 .text-figures { 
     -moz-font-feature-settings: 'onum';
     -ms-font-feature-settings: 'onum';
