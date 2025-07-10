@@ -1,662 +1,441 @@
-<html>	
-	
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<meta name="viewport" content="height=device-height">
-		<meta author="MohammadJavad_Ardestani">
-		<meta description="Mohammad Javad's Project Portfolio">
-		<meta keywords="Mohammad,Javad,Ardestani, resume, CV">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>MohammadJavad's  Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Javad Ardestani - ML Researcher & Applied Scientist</title>
+    <meta name="description" content="Machine Learning researcher and applied scientist with expertise in Deep Learning, NLP, and LLMs. Experienced in developing evaluation pipelines and ML system design.">
+    <meta name="keywords" content="Machine Learning, NLP, LLMs, Research, Applied Scientist, Deep Learning">
 		<link rel="icon" type="image/png" href="./images/title_icon.png">
-		<link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
-
 	<body>
-		<!--TODO: change the logo initial from TT to your initials-->
-		<a href="./index.html" class="logo" title="Home"><span class="logo-initial">MJ</span></a>
-		<div class="special-menu">
-			<a href="#top" class="scroll-links special-link">Top</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MJ</span>
 		</div>
-		<div class="scroll-menu">
-			<a href="#education" class="scroll-links">Education</a>
-			<a href="#ResearchExperience" class="scroll-links">Research Experience</a>
-			<a href="#skills" class="scroll-links">Skills & Languages</a>
-			<a href="#projects" class="scroll-links">Notable Projects</a>
-			<a href="#presentations" class="scroll-links">Presentations</a>
-			<a href="#NotableCourses" class="scroll-links">Notable Courses</a>
-			<a href="#TeachingExperience" class="scroll-links">Teaching Experience</a>
-			<a href="#HonersAwards" class="scroll-links">Honers & Awards</a>
-			<a href="#ExtraCurricularLeadership" class="scroll-links last-link">Extra Curricular</a>
-			<!-- <a href="#contact" class="scroll-links ">Contact</a> -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
 		</div>
-
-		<section class="full-page" id="top">
-			<section class="left white wrapper">
-				<div class="container">
-					<div class="dummy">
-						<h1 class="myName">MohammadJavad Ardestani</h1><br>
-						<h6 class="">Computer Engineering student <br> Amirkabir University of Technology - Tehran Polytechnic</h6>
-						<br><br>
-						<div style="margin-left:10%; margin-top:20px; margin-bottom:70px; margin-right:10%" align="justify">
-							Hello there!<br>
-							I'm Mohammad Javad Ardestani, a senior undergraduate student studying Computer Engineering at the Amirkabir University of Technology,
-							 majoring in Artificial Intelligence and minoring in Computer Networks. I am fascinated by Deep Learning,
-							  and Machine Learning applied to Natural Language Processing and Computer Vision. I have two years of research experience in these fields.<br> 
 						</div>
-						<div align="center" style="margin:50px; color:white"> <a href="assets/Mohammad_Javad_Ardestani_CV_Jan2022 (1).pdf" target="_blank" class="button black " title="CV">Download CV</a></div>
+    </nav>
 
-						<p>
-							<a class="fa-icon fa-icon-2x" href="mailto:mjavad.ardestani00@gmail.com" target="_blank" title="Gmail">
-							  <i class="fa fa-envelope"></i>
-							</a>
-							<a class="fa-icon fa-icon-2x" href="https://t.me/Mohammad_Ardestani4" target="_blank" title="Telegram">
-							  <i class="fa fa-paper-plane"></i>
-							</a>
-							<a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/mohammad-javad-ardestani/" target="_blank" title="LinkedIn">
-							  <i class="fa fa-linkedin"></i>
-							</a>
-							<a class="fa-icon fa-icon-2x" href="https://github.com/MohammadJavadArdestani" target="_blank" title="Github">
-							  <i class="fa fa-github"></i>
-							</a>
-						</p>
-              
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Mohammad Javad Ardestani
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Machine Learning Researcher & Applied Scientist
+                    </h2>
+                    <p class="hero-description">
+                        Specializing in Deep Learning, NLP, and LLMs with expertise in developing evaluation pipelines, 
+                        advising on ML system design, and supporting ethical deployment. 
+                        Focused on turning research into scalable, reliable solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="assets/Mohammad_Javad_Ardestani_CV_Jan2022 (1).pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                    </div>
 					</div>
-					
+                <div class="hero-image">
+                    <img src="images/me3.jpeg" alt="Mohammad Javad Ardestani" class="profile-image">
+				</div>
+					</div>
 				</div>
 			</section>
-			<section class="left black wrapper">
-				<div class="container">
-					<div class="dummy myImg">
-						<img class="img-circle responsive" src="images/me3.jpeg">
-						<div><a href="#portfolio" class="button white scroll-links" title="Homepage" style="margin: 50px; padding: 10px">Explore My Homepage</a></div>
-						
-					</div>
-				</div>
-			</section>
-			<div style="clear: both;"></div>
-		</section>
 
-		<section class="content" id="portfolio">
-		
-<!----------------------------------------------------ABOUT-ME START--------------------------------------------------------------------------------------->
-			<!-- <h1 class="heading" id="about" name="about" style="font-family: sans-serif;">About Me</h1>
-			<p>
-				Hello there! <br>
-				I'm Mohammad Javad Ardestani, a senior undergraduate student studying Computer Engineering at Amirkabir University of Technology (Tehran Polytechnic).
-				 I am fascinated by Deep Learning applied to Natural Language Processing tasks. I have two years of research experience in Deep Learning and Natural Language Processing. 
-				 I am interested in applying my NLP knowledge to information retrieval systems and content-based recommender systems.
-			</p>
-			<br>
-			<div align="center"><a href="assets/Mohammad_Javad_Ardestani_CV_Jan2022 (1).pdf"  style="text-decoration:none" target="_blank"
-				class="CV-button " title="CV">Download CV</a></div> --> 
-			
-<!----------------------------------------------------ABOUT-ME END--------------------------------------------------------------------------------------->
-
-<!----------------------------------------------------EDUCATION START--------------------------------------------------------------------------------------->				
-			<h1 class="heading" id="education" name="education">Education</h1>
-
-			<div class="item">
-				<div class="paper-detail"><span class="paper-title"><a style="text-decoration: none;color: blue" href="https://ce.aut.ac.ir/"target=_blank"><b>Amirkabir University of Technology (Tehran Polytechnic)</b></a>, Tehran, Iran
-				<!-- <br><code class="id_tags">July 2022-Now</code> -->
-					<div class="project-description education">
-						 B.Sc. of <b>Computer Engineering</b>, Major in <b>Artificial Intelligence</b> and Minor in Computer Networks.<br>
-						<b> GPA:</b> 3.95/4 (18.87/20)<br>
-						<!-- <b>GPA over the past two years:</b> 4/4 (19.61/20)<br> -->
-						<b>Duration:</b> Fall 2018-Winter 2023 (Expected)
-					</div>
-				</div>	
-				<hr>
-			</div>
-
-			<div class="item">
-				<div class="paper-detail"><span class="paper-title"> <a style="text-decoration: none;color: blue" href="https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents"target=_blank"><b>Sattari High School (NODET)</b></a>, Tehran, Iran
-				<!-- <br><code class="id_tags">July 2022-Now</code> -->
-					<div class="project-description education">
-						High School Diploma, <b>Mathematics and Physics</b>.<br>
-						<b>GPA:</b> 4/4 (20/20)<br>
-						<b>Duration:</b> Fall 2014-Spring 2018<br>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Machine Learning researcher and applied scientist with a strong foundation in 
+                        <strong>Deep Learning</strong>, <strong>NLP</strong>, and <strong>LLMs</strong>, 
+                        blending academic rigor with real-world impact. My work spans both structured and 
+                        unstructured data, with strengths in supervised and unsupervised learning.
+                    </p>
+                    <p>
+                        I have experience in developing evaluation pipelines, advising on ML system design, 
+                        and supporting ethical deployment. I've scoped client needs, guided architecture decisions, 
+                        and mentored non-technical stakeholders on model choices.
+                    </p>
+                    <div class="key-expertise">
+                        <h3>Key Expertise</h3>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Deep Learning</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-language"></i>
+                                <span>NLP & LLMs</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>ML System Design</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Ethical AI</span>
+                            </div>
+                        </div>
 					</div>
 				</div>	
-				<hr>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>2+</h3>
+                        <p>Years Research Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <p>Research Institutions</p>
 			</div>
-			
-<!----------------------------------------------------EDUCATION END--------------------------------------------------------------------------------------->	
-			
-<!----------------------------------------------------Research Experience START--------------------------------------------------------------------------------------->			
-			<h1 class="heading" id="ResearchExperience" name="Research Experience">Research Experience</h1>
-	        
-			<!--Paper 1: START-->
+					</div>
+				</div>	
+			</div>
+    </section>
 
-
-			<div class="item">
-				<div class="paper-detail"><span class="paper-title"><b>Research Intern, <a style="text-decoration: none;color: blue"
-					 href="https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents"target=_blank">AGH University of Science and Technology</a>, Krakow, Poland</b> (July 2022-Now)
-				<!-- <br><code class="id_tags">July 2022-Now</code> -->
-					<div class="project-description"> 
-						Supervisor: <a style="text-decoration: none;color: blue"
-						href="https://www.isim.agh.edu.pl/staff-members/lukasz-sztangret/"target=_blank">Dr.  Lukasz Sztangrety</a>, Applied Computer Science and Modelling Department
-						<ul>
-							<li> Different neural networks are trained by balanced datasets to simulate multi-variable functions.
-							<!-- <li> Functions’ domain are divided into several parts, each part considered as a class. -->
-							<li> Adaptation algorithms are customized to overcome overfitting in Incremental Learning.
-							<li> Neural networks are adopted with online samples of only one class without overfitting.
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI Research Planning & Initiation (AIRPI)</h3>
+                            <span class="timeline-company">Amii, Edmonton, Canada</span>
+                            <span class="timeline-date">2025/7 - Present</span>
+                        </div>
+                        <ul>
+                            <li>Designing and planning a searchable knowledge base for RAG systems</li>
+                            <li>Evaluating classification methods to improve metadata quality</li>
+                            <li>Collaborating cross-functionally with scientists and product managers</li>
+                            <li>Investigating feedback mechanisms for continuous improvement</li>
 						</ul>
 					</div>
 				</div>	
-				<hr>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Client Coaching - Startup Mentorship</h3>
+                            <span class="timeline-company">Amii, Edmonton, Canada</span>
+                            <span class="timeline-date">2024/12 - 2025/05</span>
 			</div>
-			<div class="item">
-	        	<div class="paper-detail"><span class="paper-title"><b>Research Assistant, Amirkabir University of Technology, Tehran, Iran</b> (June 2021-Now)
-				<!-- <br><code class="id_tags"></code> -->
-					<div class="project-description">Supervisor: <a style="text-decoration: none;color: blue"
-						href="https://aut.ac.ir/cv/3031/Hossein-Zeinali?slc_lang=en&&cv=3031&mod=scv"target=_blank">Dr. Hossein Zeinali</a>, Computer Engineering Department
-						<ul>
-							<li> Large-size book embeddings are represented by using a CNN model and Transfer Learning methods.
-							<li> Similarity score is estimated by SVR, KNN, and different document similarity techniques.
-							<li>Content-based book recommender system is implemented using CUDA parallel computing.
-							<li> An efficient retrieval system implemented to find similar paragraphs in books for a paragraph query.
+                        <ul>
+                            <li>Advised startups on LLM system design and deployment planning</li>
+                            <li>Provided mentorship on fine-tuning and RAG implementation</li>
+                            <li>Guided ethical LLM deployment including bias mitigation</li>
+                            <li>Explained ML strategies to technical and non-technical teams</li>
 						</ul>
 					</div>
 				</div>	
-				<hr>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Assistant</h3>
+                            <span class="timeline-company">University of Alberta, Edmonton, Canada</span>
+                            <span class="timeline-date">2024/2 - Present</span>
 	        </div>
-			<!--Paper 1: END-->
-			
-			<!--Paper 2: START-->
-			<div class="item">
-	        	<div class="paper-detail"><span class="paper-title"><b>Research Intern, <a href="http://www.ipm.ir/about.jsp" style="color:blue;text-decoration:none" target="_blank">  Institute For Research In Fundamental Sciences</a>, Tehran, Iran</b> (June 2020-March 2021)
-				<!-- <br><code class="id_tags"></code> -->
-					<div class="project-description">Supervisor: <a style="text-decoration: none;color: blue"
-						href="https://cse.sbu.ac.ir/~d_rahmati"target=_blank">Dr. Dara Rahmati</a>, , Computer Science Department
-						<ul>
-							<li> Tensor-based methods were developed for non-binary Decision-Making problems.
-							<li> Matrix-based methods were upgraded for Random Walk process in binary decision-making problems.
-							
+                        <ul>
+                            <li>Proposed recall evaluation pipeline for LLM-generated answers</li>
+                            <li>Developed modular system combining fact extraction and entailment checking</li>
+                            <li>Applied pipeline to high-stakes domains (law, medicine)</li>
+                            <li>Achieved +40% F1 improvement over lexical baselines</li>
 						</ul>
 					</div>
 				</div>	
-				<hr>
 	        </div>
-			<!--Paper 2: END-->
-			
-		
-
-<!----------------------------------------------------Research Experience END--------------------------------------------------------------------------------------->	
-
-<!----------------------------------------------------SKILLS START---------------------------------------------------------------------------------------->				
-<h1 class="heading" id="skills" name="skills">Skills</h1>
-<div class="item skill">
-		<div class="paper-detail"><b>Programming Languages: </b>Python, C, C++, MATLAB, Java, Go, Bash.</div>
-		<div class="paper-detail"><b>AI Tools/Frameworks: </b>PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV, NumPy, Pandas, Matplotlib</div>
-		<div class="paper-detail"><b>Tools: </b>Git, Docker, Arduino, Postman</div>
-		<div class="paper-detail"><b>Operating Systems: </b>Ubuntu, MacOS, Windows</div>
-		<div class="paper-detail"><b>Web Programming: </b>Flask, Django, HTML5, CSS, JavaScript </div>
-		<div class="paper-detail"><b>Typesetting Tools: </b>Vim, Latex, Microsoft office(Word, Powerpoint, Excel), Prezi</div>
-		<!-- <div class="paper-detail"><b> Languages: </b> Persian (Native), English (Full professional proficiency)</div> -->
 	</div>
-	<hr>
+    </section>
 
-<!----------------------------------------------------SKILLS END---------------------------------------------------------------------------------------->	
-
-<!----------------------------------------------------SKILLS START---------------------------------------------------------------------------------------->				
-<h1 class="heading" id="languages" name="skills">Languages</h1>
-<div class="item skill">
-<div class="paper-detail"><b>Persian: </b>Native</div>
-<div class="paper-detail"><b> English: </b>Full professional proficiency</div>
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research & Publications</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>LongRecall: A Structured Approach for Robust Recall Evaluation</h3>
+                        <span class="research-status">Under Review - EMNLP 2025</span>
 </div>
-<hr>
-
-<!----------------------------------------------------SKILLS END---------------------------------------------------------------------------------------->	
-
-
-<!----------------------------------------------------PROJECTS START---------------------------------------------------------------------------------------->	
-
-			<h1 class="heading" id="projects" name="projectsml">Notable Projects</h1>
-			<section class="grid-collection">
-				
-				<!--Project 1: START-->
-				<div class="item">
-					<div class="project-title">Medical Image Processing</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">Image Processing</code>
-						<code class="id_tags">Transfer Learning</code>
-						<code class="id_tags">CNN</code>
+                    <p class="research-authors">
+                        <strong>MohammadJavad Ardestani</strong>, Ehsan Kamalloo, and Davood Rafiei
+                    </p>
+                    <p class="research-description">
+                        A novel evaluation pipeline for LLM-generated answers in free-form and list-based QA, 
+                        achieving significant improvements over existing baselines.
+                    </p>
 					</div>
 					
-					<div class="project-description">In this Image processing project, I used a CNN classifier to classify COVID-19 Infected Lung Xray images from Healthy Lung Xray images.
-						<ul>
-							<li> A Classifier is implemented for detecting COVID-19 Infected based on ’Lung X-ray images’.
-							<li> Pre-trained DenseNet-121 is used as the model's core as a means to Transfer Learning.
-							<li> generalization evaluated by a selection of samples from three different data sets 
-							<!-- <li> Association Rule Mining by Apriori algorithm
-							<li> Clustering by DBSCAN and K-means -->
-						</ul>
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>Hybrid Book Recommendation System</h3>
+                        <span class="research-status">Deployed at Taaghche</span>
 					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/Medical-Image-Processing/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> |
-						<a href="https://github.com/MohammadJavadArdestani/Medical-Image-Processing" target="_blank" style="color:blue;text-decoration:none">Code</a>
-					</div>
-				</div>
-				<!--Project 1: END-->
-
-
-				<!--Project 1: START-->
-				<div class="item">
-					<div class="project-title">Data Mining Projects</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">Data Mining</code>
-						<code class="id_tags">Tensorflow</code>
-						<code class="id_tags">XGBoost</code>
-						<code class="id_tags">ARM</code>
-						<code class="id_tags">Clustering</code>
+                    <p class="research-authors">
+                        <strong>MohammadJavad Ardestani</strong> et al.
+                    </p>
+                    <p class="research-description">
+                        Advanced recommendation system combining word embeddings with fine-tuned BERT + CNN, 
+                        boosting recommendation relevance by ~20%.
+                    </p>
 					</div>
 					
-					<div class="project-description">This repository contains five different projects. In each of these projects, essential subjects of Data Mining are covered.
-						<ul>
-							<li> Using XGBoost classifier for Diabetes Detection
-							<li> Iris dataset analysis by Pandas and scikit-learn
-							<li> Classification by neural networks in Tensorflow
-							<li> Association Rule Mining by Apriori algorithm
-							<li> Clustering by DBSCAN and K-means
-						</ul>
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>Incremental Learning with Overfitting Mitigation</h3>
+                        <span class="research-status">AGH University of Science and Technology</span>
 					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/Data-Mining-projects/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> |
-						<a href="https://github.com/MohammadJavadArdestani/Data-Mining-projects" target="_blank" style="color:blue;text-decoration:none">Code</a>
-					</div>
-				</div>
-				<!--Project 1: END-->
-				
-
-				<!--Project 2: START-->
-				<div class="item">
-					<div class="project-title">NLP with Classification and Vector Spaces Course Projects</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">NLP</code>
-						<code class="id_tags">LSH</code>
-						<code class="id_tags">Naive Bayes</code>
-						<code class="id_tags">Logistic Regression</code>
-						
-					</div>
-					<!-- description -->
-					<div class="project-description">
-					This project contains Implementations of this <a href="https://www.coursera.org/specializations/natural-language-processing?" target="_blank" style="color:blue;text-decoration:none">NLP course</a>. It divided into Four parts:   
-
-						<ul>
-							<li> Translation as linear transformation
-							<li> Sentiment analysing using Logistic Regression
-							<li> Classification using Naive Bayes Classifier
-						
-							<li> Finding the most similar tweets using Locality Sensitive Hashing
-						</ul>
-					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/NLP-with-Classification-and-Vector-Spaces/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> | 
-						<a href="https://github.com/mohammadjavadArdestani/NLP-with-Classification-and-Vector-Spaces" target="_blank" style="color:blue;text-decoration:none">Code</a>
+                    <p class="research-authors">
+                        <strong>MohammadJavad Ardestani</strong> et al.
+                    </p>
+                    <p class="research-description">
+                        Studied overfitting mitigation in incremental learning via custom adaptation 
+                        and weighting strategies for evolving data environments.
+                    </p>
 					</div>
 				</div>
-				<!--Project 2: END-->
+					</div>
+    </section>
 
-				<!--Project 2: START-->
-				<div class="item">
-					<div class="project-title">Information Retrieval System</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">NLP</code>
-						<code class="id_tags">ElasticSearch</code>
-						<code class="id_tags">Ranked Retrieval</code>
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Notable Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Triple and Event Extraction using Few-Shot & CoT Techniques</h3>
+                        <a href="https://github.com/jai-riley/CMPUT656_Project" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
 					</div>
-					<!-- description -->
-					<div class="project-description">
-						This is project is implemented for ISNA news agency dataset in four phases:
-						<ul>
-							<li> Boolean retrieval and spell correction systems are implemented using the Elasticsearch.
-							<li> Tokenizer and normalizer functions are implemented for Persian texts.
-							<li> Champions list and heapsort methods are used for efficient query responding and ranked retrieval.
-							<li> K-means and KNN algorithms are used to speed up query responding.
-						</ul>
-					
-					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/Information-Retrieval-System/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> | 
-						<a href="https://github.com/MohammadJavadArdestani/Information-Retrieval-System" target="_blank" style="color:blue;text-decoration:none">Code</a>
+                    <p>Enhanced LLMs for knowledge graph construction via prompt-based alignment for factual consistency.</p>
+                    <div class="project-tags">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Knowledge Graphs</span>
+                        <span class="tag">CoT Prompting</span>
 					</div>
 				</div>
-				<!--Project 2: END-->
 
-				<!--Project 2: START-->
-				<div class="item">
-					<div class="project-title">Evolutionary Helicopter Game</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">Evolutionary Algorithems</code>
-						<code class="id_tags">MLP</code>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Explanation Generation for SQL Queries</h3>
+                        <a href="https://github.com/MoJa-Ardestani/University_Docs/tree/main/Research/Master_Project/paper" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
 					</div>
-					<!-- description -->
-					
-
-					<div class="project-description">
-						In this game, helicopters, as an evolutionary model, can determine when to move upward and downward to overcome all obstacles.
-						<ul>
-							<li>  MLPs are considered entities in the evolution process that make decisions for movements.
-							<li>  ANNs are fed by the horizontal and vertical distance of the first obstacle and the helicopter location.
-							<li>  The roulette wheel is used for next-generation selection
-							<li>  The next-generation population is generated by the crossover method and mutated by Gaussian noise
-						</ul>
-					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/Evolutionary-Helicopter-Game/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> | 
-						<a href="https://github.com/MohammadJavadArdestani/Evolutionary-Helicopter-Game" target="_blank" style="color:blue;text-decoration:none">Code</a>
+                    <p>Developed a system for generating explanations of SQL queries from natural language questions.</p>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Explanation Generation</span>
 					</div>
 				</div>
-				<!--Project 2: END-->
 
-				<!--Project 2: START-->
-				<div class="item">
-					<div class="project-title">ANN Framework From Scratch for Handwritten Digit Recognition</div>
-					<div>
-						<code class="id_tags">ANN</code>
-						<code class="id_tags">Pattern Recognition</code>
-						<code class="id_tags">Adversarial Attack</code>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Medical Image Processing - COVID-19 Detection</h3>
+                        <a href="https://github.com/MohammadJavadArdestani/Medical-Image-Processing" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
 					</div>
-
-					<!-- description -->
-					<div class="project-description">
-						In this project, I developed an ANN framework from scratch that can be used to train and evaluate Fully Connected Neural Networks for different tasks.
-						<ul>
-							<li>  An adaptable framework is implemented to define fully connected neural networks.
-							<li>  An FCNN is trained and evaluated to classify MNIST dataset.
-							<li>  The Impact of adversarial attacks is measured by shifting digit pattern matrices.
-						</ul>
-					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/ANN_framework_for_Hand-Written_Digit_Recognition/blob/main/README.md" target="_blank" style="color:blue;text-decoration:none">Report</a> | 
-						<a href="https://github.com/MohammadJavadArdestani/ANN_framework_for_Hand-Written_Digit_Recognition" target="_blank" style="color:blue;text-decoration:none">Code</a>
+                    <p>Implemented COVID-19 Detection via Lung X-Ray Classification using DenseNet-121.</p>
+                    <div class="project-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Medical AI</span>
+                        <span class="tag">Transfer Learning</span>
 					</div>
 				</div>
-				<!--Project 2: END-->
-
-				<!--Project 2: START-->
-				<div class="item">
-					<div class="project-title">Classic AI Projects</div>
-					<div>
-						<code class="id_tags">Python</code>
-						<code class="id_tags">CSP</code>
-						<code class="id_tags">Backoff Models</code>
-						<code class="id_tags">BFS</code>
-						<code class="id_tags">IDS</code>
-						<code class="id_tags">A*</code>
 					</div>
-
-					<div class="project-description">
-						<!-- In this project, I developed an ANN framework from scratch that can be used to train and evaluate Fully Connected Neural Networks for different tasks. -->
-						<ul>
-							<li>  Sudoku tables are solved as a Constraint Satisfaction Problem using the backtracking algorithm.
-							<li> Poets are identified by calculating probabilities using Unigram, Bigram, and Backoff models.
-							<li>  Colored cards are sorted by BFS, IDS, and A* with a heuristic function.
-						</ul>
 					</div>
-					<div class="project-links">
-						<a href="https://github.com/MohammadJavadArdestani/Classic-AI-Projects" target="_blank" style="color:blue;text-decoration:none">Report</a> | 
-						<a href="https://github.com/MohammadJavadArdestani/Classic-AI-Projects" target="_blank" style="color:blue;text-decoration:none">Code</a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
 					</div>
 				</div>
-				<!--Project 2: END-->
+                <div class="skill-category">
+                    <h3>ML & NLP</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">scikit-learn</span>
+                        <span class="skill-item">Hugging Face</span>
+					</div>
+					</div>
+                <div class="skill-category">
+                    <h3>LLM Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">LangChain</span>
+                        <span class="skill-item">LlamaIndex</span>
+                        <span class="skill-item">Fine-tuning</span>
+                        <span class="skill-item">RAG Pipelines</span>
+					</div>
+				</div>
+                <div class="skill-category">
+                    <h3>Infrastructure</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Kubernetes</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">GitHub Actions</span>
+					</div>
+				</div>
+					</div>
+				</div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations in Machine Learning research and applied AI.</p>
+                    <div class="contact-links">
+                        <a href="mailto:ardestan@ualberta.ca" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>ardestan@ualberta.ca</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammad-javad-ardestani/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/MohammadJavadArdestani" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+					</div>
+				</div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+				</div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+					</div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+				</div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+				</div>
+					</div>
+				</div>
 			</section>
-<!----------------------------------------------------PROJECTS END---------------------------------------------------------------------------------------->				
-<!----------------------------------------------------PRESENTATION START---------------------------------------------------------------------------------------->				
 
-<h1 class="heading" id="presentations" name="Presentations">Presentations</h1>
-			<section class="grid-collection">
-				
-				<!--Project 1: START-->
-				<div class="item">
-					<div class="project-title"> Convolutional Neural Networks</div>
-					<div class="project-description">
-						<ul>
-							<li>Data Mining Course 
-							<li>Dr. Ehsan Nazerfard 
-							<li>Amirkabir University of Technology
-						</ul>
-					</div>	
-					<div class="project-links">
-						<a href="https://docs.google.com/presentation/d/1YclOPLmXIAoqfyPHsgooh9J1pL5N3Nt7/edit#slide=id.p1" target="_blank" style="color:blue;text-decoration:none">Slide</a>
-						| <a href="https://drive.google.com/file/d/1Zi-GxoJSK-XN-yF7ZAWzTDDg8_5Y7kMJ/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Report</a> 
-						<!-- | <a href="assets/" target="_blank" style="color:blue;text-decoration:none">Video</a> -->
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="project-title">Introduction to Neural Networks and Word Embedding</div>
-					<div class="project-description">
-					<ul>
-					<li> Information Retrieval Course</li>
-					<li> Dr. Ahmad Nickabadi
-					<li> Amirkabir University of Technology
-					</ul>
-				</div>
-					<div class="project-links">
-						<a href="https://drive.google.com/file/d/1dVsfVGYb5TAROPqc1tPX5PHk1wDLxJWf/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Slide</a>
-						| <a href="https://drive.google.com/file/d/1l6ML1tpTX4pkW13Wvs5RPY9_m2P4Lj_1/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Video</a> 
-						<!-- | <a href="assets/" target="_blank" style="color:blue;text-decoration:none">Video</a> -->
-					</div>
-				</div>
-				
-				<div class="item">
-					<div class="project-title">An Analysis of IoT Cyber Security Techniques Driven By Machine Learning</div>
-					<div class="project-description">
-					<ul>
-					<li>Research and Technical Presentation Course
-					<li>Dr. Reza Safabakhsh
-					<li>Amirkabir University of Technology
-					</ul>
-				</div>
-					<div class="project-links">
-						<a href="https://docs.google.com/presentation/d/1JWLBIobpOM2XJbVg2CoQZxuzgQPYuKHI/edit?usp=sharing&ouid=103914051603888911037&rtpof=true&sd=true" target="_blank" style="color:blue;text-decoration:none">Slide</a>
-						| <a href="https://drive.google.com/file/d/1rsuSayica6chJ84XbCQP8cSSpPw9k9h9/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Report</a> 
-						| <a href="https://drive.google.com/file/d/1uCUHA_V9tsQ3MEqMzAHCBYyOE2cxKGnx/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Video</a>
-					</div>
-				</div>
-				
-				<div class="item">
-					<div class="project-title">Decision Making Methods</div>
-					<div class="project-description">
-					<ul>
-					<li> Startup Development Course
-					<li> Dr. Hamed Ghanadpour
-					<li> Amirkabir University of Technology
-					</ul>
-				</div>
-					<div class="project-links">
-						<a href="https://docs.google.com/presentation/d/1CdixnQrA-4kYupQL-yuPMDroEqR_qyfS/edit?usp=sharing&ouid=103914051603888911037&rtpof=true&sd=true" target="_blank" style="color:blue;text-decoration:none">Slide</a>
-						<!-- | <a href="" target="_blank" style="color:blue;text-decoration:none">Report</a>  -->
-						| <a href="https://drive.google.com/file/d/1noJvVTrG2h3syl5J6HE9r2nl-ltcnUCv/view?usp=sharing" target="_blank" style="color:blue;text-decoration:none">Video</a>
-					</div>
-				</div>
-				
-
-				<div class="item">
-					<div class="project-title">Tensor Method For Analyzing Multi-Dimensional Diffusion Models</div>
-					<div class="project-description">
-					<ul>
-					<li> IPM Intern's Seminars
-					<li> Dr. Dara Rahmati
-					<li> Institute for Research in Fundamental Sciences (IPM)
-					</ul>
-				</div>
-					<div class="project-links">
-						<a href="https://docs.google.com/presentation/d/1m8jzCEmIk_ATxYR4YscXo4WpffHMPqxf/edit?usp=sharing&ouid=103914051603888911037&rtpof=true&sd=true" target="_blank" style="color:blue;text-decoration:none">Slide</a>
-						<!-- | <a href="" target="_blank" style="color:blue;text-decoration:none">Report</a>  -->
-						<!-- | <a href="assets/" target="_blank" style="color:blue;text-decoration:none">Video</a> -->
-					</div>
-				</div>
-
-				
-				<!--Project 1: END-->
-			</section>
-<!----------------------------------------------------PRESENTATION END---------------------------------------------------------------------------------------->				
-
-<!----------------------------------------------------Courses START--------------------------------------------------------------------------------------->			
-<h1 class="heading" id="NotableCourses" name="Courses">Notable Courses</h1>
-	        
-<!--Paper 1: START-->
-<div class="item">
-	<div class="paper-detail"><span class="paper-title"><b>Related Courses, Amirkabir University of Technology</b>
-		<div class="project-description twoul">
-			
-				<li>  Data Mining (19.8/20)
-				<li>  Information Retrieval (20/20)
-				<li>  Principles of Computational Intelligence (19/20)
-				<li>  Artificial Intelligence (20/20)
-				<li>  Data Structures and Algorithms Design (20/20)
-				<li>  Principles of Cloud Computing (20/20)
-				<li>  Computer Networks (19.6/20)
-				<li>  Operating Systems (19.5/20)
-				<!-- <li>  Technical English (19/20) -->
-				<li>  Research and Technical Presentation (19.2/20)
-				<li>  Software Engineering I & II (20/20) 
-				
-			
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Mohammad Javad Ardestani. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
 		</div>
 	</div>	
-	<hr>
 </div>
-<!--Paper 1: END-->
+    </footer>
 
-<!--Paper 2: START-->
-<div class="item">
-	<div class="paper-detail"><span class="paper-title"><b>Online Courses, Coursera</b>
-	<!-- <br><code class="id_tags">June 2020 - March 2021</code> -->
-		<div class="project-description"> 
-			<ul>
-				<li> Natural Language Processing Specialization <a href="https://mftplus.com/?" target="_blank" style="color:blue;text-decoration:none"> (Deeplearning.ai)</a> <a href="https://www.coursera.org/account/accomplishments/certificate/PJ66HF6FHW2E" target="_blank" style="color:blue;text-decoration:none"> (Certificate)</a>
-				<li> Data Science <a href="https://mftplus.com/?" target="_blank" style="color:blue;text-decoration:none"> (IBM)</a> <a href="https://www.credly.com/badges/53d763ef-d1d0-4b4f-95d3-d57a9789dff3?source=linked_in_profile" target="_blank" style="color:blue;text-decoration:none"> (Certificate)</a>
-				<li> Machine Learning <a href="https://mftplus.com/?" target="_blank" style="color:blue;text-decoration:none"> (Stanford)</a>
-				<li> Mathematics for Machine Learning <a href="https://mftplus.com/?" target="_blank" style="color:blue;text-decoration:none"> (Imperial College London)</a>  <a href="https://www.coursera.org/account/accomplishments/certificate/67Q8ZG2XEB8U" target="_blank" style="color:blue;text-decoration:none"> (Certificate)</a>
-			</ul>
+    <!-- Dashboard Button (Admin Only) -->
+    <div class="dashboard-toggle" id="dashboardToggle">
+        <i class="fas fa-cog"></i>
+		</div>
+
+    <!-- Dashboard Modal -->
+    <div class="dashboard-modal" id="dashboardModal">
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Content Management Dashboard</h2>
+                <button class="close-btn" id="closeDashboard">&times;</button>
+	</div>	
+            <div class="dashboard-body">
+                <div class="dashboard-section">
+                    <h3>Quick Actions</h3>
+                    <div class="dashboard-actions">
+                        <button class="dashboard-btn" onclick="editSection('about')">
+                            <i class="fas fa-edit"></i>
+                            Edit About
+                        </button>
+                        <button class="dashboard-btn" onclick="editSection('experience')">
+                            <i class="fas fa-briefcase"></i>
+                            Edit Experience
+                        </button>
+                        <button class="dashboard-btn" onclick="editSection('research')">
+                            <i class="fas fa-microscope"></i>
+                            Edit Research
+                        </button>
+                        <button class="dashboard-btn" onclick="editSection('projects')">
+                            <i class="fas fa-code"></i>
+                            Edit Projects
+                        </button>
 		</div>
 	</div>	
-	<hr>
-</div>
-<!--Paper 2: END-->
-
-<!----------------------------------------------------Teaching Experience END--------------------------------------------------------------------------------------->	
-
-
-<!----------------------------------------------------Teaching Experience START--------------------------------------------------------------------------------------->			
-<h1 class="heading" id="TeachingExperience" name="Teaching Experience">Teaching Experience</h1>
-<div class="item">
-	<div class="paper-detail"><span class="paper-title"><b>Teaching Assistant, Amirkabir University of Technology</b>
-		<div class="project-description">
-			<ul>
-				<li>  Information Retrieval, Dr. Ahmad Nickabadi | Fall 2021, Spring 2022
-				<li>  Computer Architecture, Dr. Hamed Farbeh Spring 2022</li>
-				<li>  Algorithm Design, Dr. AliReza Bagheri | Fall 2021
-				<li>  Applied Linear Algebra, Dr. Mostafa Haghir Chehraghani | Spring 2021
-				<li>  Applied Linear Algebra, Dr. Ehsan Nazerfard | Fall 2020
-				<li>  Principles Of Programming, Dr. Bahador Bakhshi | Fall 2019
-			</ul>
+                <div class="dashboard-section">
+                    <h3>Content Editor</h3>
+                    <div class="editor-container">
+                        <textarea id="contentEditor" placeholder="Edit content here..."></textarea>
+                        <div class="editor-actions">
+                            <button class="btn btn-primary" onclick="saveContent()">Save Changes</button>
+                            <button class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
 		</div>
 	</div>	
-	<hr>
-</div>
-<!--Paper 1: END-->
-
-<!--Paper 2: START-->
-<div class="item">
-	<div class="paper-detail"><span class="paper-title"><b>Part Time Instructor, <a href="https://mftplus.com/?" target="_blank" style="color:blue;text-decoration:none"> Tehran Institute of Technology 	 (MFT)</a></b>
-	<!-- <br><code class="id_tags">June 2020 - March 2021</code> -->
-		<div class="project-description"> 
-			<ul>
-				<li> Artificial Intelligence and Machine Learning  | Fall 2021-Now
-				<li> Python Programming  | Fall 2020-Now
-				<li> C, C++ Programming  | Fall 2019-Fall 2020
-			</ul>
+		</div>
 		</div>
 	</div>	
-	<hr>
 </div>
-<!--Paper 2: END-->
 
-<!----------------------------------------------------Teaching Experience END--------------------------------------------------------------------------------------->	
-
-<!----------------------------------------------------Honers & Awards START--------------------------------------------------------------------------------------->			
-<h1 class="heading" id="HonersAwards" name="HonersAwards"  style="margin-bottom: 10px">Honers & Awards</h1>
-	        
-<!--Paper 1: START-->
-		<div>
-			<ul>
-					<div class="honer"> <li>Awarded a fully-funded research Internship at AGH University of Science and Technology | 2022 </div>
-					<div class="honer"> <li>Announced as an outstanding student, Amirkabir University of Technology. | 2020 </div>
-					<div class="honer"> <li>Awarded 4th place among 80 teams in the Amirkabir programming league. | 2019 </div>
-					<div class="honer"> <li>Ranked in the top 0.2%, Nationwide University Entrance Exam for B.Sc. in Engineering Exam | 2018 </div>
-					<div class="honer"> <li>Awarded 1st place in the mathematics competition amongst Tehran NODET schools. | 2016, 2017 </div>
-			</ul>
-		</div>
-	<hr>
-
-<!--Paper 1: END-->
-<!----------------------------------------------------Honers & Awards END--------------------------------------------------------------------------------------->	
-
-<!----------------------------------------------------Extra Curricular & Leadership START--------------------------------------------------------------------------------------->			
-<h1 class="heading" id="ExtraCurricularLeadership" name="ExtraCurricularLeadership" style="margin-bottom: 10px">Extra Curricular & Leadership</h1>
-	        
-<!--Paper 1: START-->
-
-		<div >
-			<ul>
-				<div class="honer"><li> Member of the scientific committee at <a href="https://aaic.aut.ac.ir/" target="_blank" style="color:blue;text-decoration:none"> Amirkabir Artificial Intelligence Competition</a>  | Fall 2021 </li></div>
-				<!-- <div class="project-description">
-					As a member of scientific committee I paricipated in the Problem designing. Dataset was prepared by  Company 
-				</div> -->
-					
-				<div class="honer"><li> Leader of the competitions committee at <a href="https://aaic.aut.ac.ir/" target="_blank" style="color:blue;text-decoration:none">Students’ Scientific Chapter</a> | Fall 2020-Fall 2021 </li></div>
-				<!-- <ul>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul> -->
-				<div class="honer"><li> Member of the scientific committee at  <a href="https://aaic.aut.ac.ir/" target="_blank" style="color:blue;text-decoration:none">Amirkabir Artificial Intelligence Summer Summit</a> | Summer 2020 </li></div>
-			</ul>
-		</div>
-	</div>	
-	<hr>
-</div>
-<!--Paper 1: END-->
-<!----------------------------------------------------Extra Curricular & Leadership END--------------------------------------------------------------------------------------->	
-		<br><br>
-		<p align="center">
-			<a class="fa-icon fa-icon-2x" href="mailto:mjavad.ardestani00@gmail.com" target="_blank" title="Gmail">
-				<i class="fa fa-envelope"></i>
-			</a>
-			<a class="fa-icon fa-icon-2x" href="https://t.me/Mohammad_Ardestani4" target="_blank" title="Telegram">
-				<i class="fa fa-paper-plane"></i>
-			</a>
-			<a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/mohammad-javad-ardestani/" target="_blank" title="LinkedIn">
-				<i class="fa fa-linkedin"></i>
-			</a>
-			<a class="fa-icon fa-icon-2x" href="https://github.com/MohammadJavadArdestani" target="_blank" title="Github">
-				<i class="fa fa-github"></i>
-			</a>
-			<!-- <br> -->
-			<!-- © Mohammad Javad Ardestani. All rights reserved. -->
-		</p>
-			
-		<!-- </section> -->
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 	</body>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="./assets/thirdparty/scrollTo.min.js"></script>
-	<script>
-		$('.scroll-links').scrollTo();
-	</script>
 </html>
