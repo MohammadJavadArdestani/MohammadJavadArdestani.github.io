@@ -544,6 +544,322 @@ p {
     font-weight: 500;
 }
 
+/* Presentations Grid */
+.presentations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.presentation-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.presentation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.presentation-header {
+    margin-bottom: 1rem;
+}
+
+.presentation-header h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.presentation-course {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.presentation-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.presentation-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.presentation-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.presentation-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Courses Section */
+.courses-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-section {
+    margin-bottom: 3rem;
+}
+
+.course-section h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.course-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.course-name {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.course-grade {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Teaching Grid */
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.teaching-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.teaching-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.teaching-header {
+    margin-bottom: 1.5rem;
+}
+
+.teaching-header h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.teaching-institution {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.teaching-courses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.teaching-course {
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary-color);
+}
+
+.teaching-course .course-name {
+    display: block;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.teaching-course .instructor {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.teaching-course .semester {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.75rem;
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.award-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.award-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.award-icon {
+    color: var(--accent-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.award-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.award-content p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.award-year {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Leadership Grid */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.leadership-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.leadership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.leadership-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.leadership-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.leadership-content p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.leadership-period {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Languages Grid */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.language-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.language-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.language-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.language-content p {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
@@ -694,6 +1010,35 @@ p {
     color: white;
 }
 
+/* Admin Login */
+.admin-login {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.admin-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.admin-login i {
+    font-size: 16px;
+}
+
 /* Dashboard */
 .dashboard-toggle {
     position: fixed;
@@ -752,6 +1097,12 @@ p {
     border-bottom: 1px solid var(--border-color);
 }
 
+.dashboard-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .dashboard-header h2 {
     margin: 0;
     color: var(--text-primary);
@@ -785,8 +1136,28 @@ p {
 
 .dashboard-actions {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.action-group {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+}
+
+.action-group h4 {
+    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.action-group .dashboard-btn {
+    margin-bottom: 0.5rem;
 }
 
 .dashboard-btn {
@@ -892,7 +1263,11 @@ p {
     }
 
     .research-grid,
-    .projects-grid {
+    .projects-grid,
+    .presentations-grid,
+    .teaching-grid,
+    .awards-grid,
+    .leadership-grid {
         grid-template-columns: 1fr;
     }
 
@@ -963,6 +1338,17 @@ p {
     }
 }
 
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .section {
     animation: fadeInUp 0.6s ease-out;
 }
@@ -980,19 +1366,27 @@ html {
 
 /* Success/Error messages */
 .message {
-    padding: 1rem;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
     border-radius: var(--radius-md);
-    margin-bottom: 1rem;
+    color: white;
+    font-weight: 500;
+    z-index: 1002;
+    animation: slideInRight 0.3s ease;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .message.success {
-    background-color: #dcfce7;
-    color: #166534;
-    border: 1px solid #bbf7d0;
+    background-color: #10b981;
+    color: white;
+    border: 1px solid #059669;
 }
 
 .message.error {
-    background-color: #fef2f2;
-    color: #dc2626;
-    border: 1px solid #fecaca;
+    background-color: #ef4444;
+    color: white;
+    border: 1px solid #dc2626;
 }
