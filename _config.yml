@@ -1,1 +1,41 @@
-theme: jekyll-theme-minimal
+# GitHub Pages Configuration
+title: "MoJa Ardestani - Portfolio"
+description: "Machine Learning Researcher and Applied Scientist specializing in Deep Learning, NLP, and LLMs"
+author: "MoJa Ardestani"
+url: "https://mohammadjavadardestani.github.io"
+baseurl: ""
+
+# Jekyll Configuration
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - cv.tex
+  - editor.html
+  - serve_*.bat
+  - server_with_save.py
+  - .gitignore
+  - .github
+
+# Include files
+include:
+  - _config.yml
+  - index.html
+  - css/
+  - js/
+  - images/
+  - assets/
