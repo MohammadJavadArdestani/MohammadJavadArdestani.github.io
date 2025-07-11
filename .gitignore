@@ -1,9 +1,33 @@
-# Admin and development files
-js/main.js
-css/main.css
-README.md
+# Local Development Files (exclude from GitHub)
+editor.html
+server_with_save.py
+serve_*.bat
+serve_both_with_save.bat
+serve_editor_with_save.bat
+serve_editor.bat
+serve_main.bat
+serve_both.bat
+test-both.bat
+run_sites.bat
+serve.py
 
-# OS generated files
+# CV Source Files
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.md
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
@@ -11,13 +35,6 @@ README.md
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
 
 # Logs
 *.log
@@ -33,9 +50,6 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage/
-
-# nyc test coverage
-.nyc_output
 
 # Dependency directories
 node_modules/
@@ -55,14 +69,12 @@ node_modules/
 # dotenv environment variables file
 .env
 
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
 # Temporary files
 *.tmp
 *.temp
-
-# Backup files
-*.bak
-*.backup
-
-# Local configuration files
-config.local.js
-settings.local.json 
