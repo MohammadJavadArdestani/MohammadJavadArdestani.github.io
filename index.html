@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,659 +8,949 @@
     <meta name="description" content="MoJa Ardestani - Machine Learning Researcher and Applied Scientist specializing in Deep Learning, NLP, and LLMs">
     <meta name="keywords" content="MoJa Ardestani, Machine Learning, NLP, LLMs, Research, University of Alberta, Amii">
     <meta name="author" content="MoJa Ardestani">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="MoJa Ardestani - Portfolio">
     <meta property="og:description" content="Machine Learning Researcher and Applied Scientist specializing in Deep Learning, NLP, and LLMs">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mohammadjavadardestani.github.io">
     <meta property="og:image" content="images/me3.jpeg">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MoJa Ardestani - Portfolio">
     <meta name="twitter:description" content="Machine Learning Researcher and Applied Scientist specializing in Deep Learning, NLP, and LLMs">
     <meta name="twitter:image" content="images/me3.jpeg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/title_icon.png">
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
-    
+
     <!-- Preload critical resources -->
     <link rel="preload" href="images/me3.jpeg" as="image">
     <link rel="preload" href="css/main.css" as="style">
+
+    <!-- AI Background Animation Styles -->
+    <style>
+        #ai-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        #home {
+            position: relative;
+            overflow: hidden;
+        }
+        /* Ensure content appears above animation */
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-title,
+        .hero-subtitle,
+        .hero-description,
+        .hero-buttons {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">MoJa Ardestani</a>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Left Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="images/title_icon.png" alt="Logo" class="logo-icon">
+                <span>MoJa Ardestani</span>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#professional-experience">Professional</a></li>
-                        <li><a href="#research-experience">Research</a></li>
-                        <li><a href="#teaching-experience">Teaching</a></li>
-                    </ul>
-                </li>
-                <!-- <li class="nav-item">
-                    <a href="#research" class="nav-link">Research</a>
-                </li> -->
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="header-social-icons">
+                <a href="https://www.linkedin.com/in/mohammad-javad-ardestani/" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/MohammadJavadArdestani" target="_blank" class="social-icon github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank" class="social-icon scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:ardestan@ualberta.ca" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="sidebar-item">
+                <a href="#home" class="sidebar-link active" data-tab="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#about" class="sidebar-link" data-tab="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#experience" class="sidebar-link" data-tab="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </a>
+                <ul class="sidebar-dropdown">
+                    <li><a href="#professional-experience" class="sidebar-dropdown-link" data-tab="professional-experience">Professional</a></li>
+                    <li><a href="#research-experience" class="sidebar-dropdown-link" data-tab="research-experience">Research</a></li>
+                    <li><a href="#teaching-experience" class="sidebar-dropdown-link" data-tab="teaching-experience">Teaching</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="#projects" class="sidebar-link" data-tab="projects">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#skills" class="sidebar-link" data-tab="skills">
+                    <i class="fas fa-brain"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#leadership" class="sidebar-link" data-tab="leadership">
+                    <i class="fas fa-users"></i>
+                    <span>Leadership</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#contact" class="sidebar-link" data-tab="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="copyright">
+                <p class="location">📍 Edmonton, AB, Canada</p>
+                <p>&copy; 2024 MoJa Ardestani</p>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="images/me3.jpeg" alt="MoJa Ardestani" class="profile-image">
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/mohammad-javad-ardestani/" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/MohammadJavadArdestani" target="_blank" class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:ardestan@ualberta.ca" class="social-icon">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <!-- AI Background Animation -->
+            <canvas id="ai-bg"></canvas>
+
+            <section class="hero">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-image">
+                            <img src="images/me3.jpeg" alt="MoJa Ardestani" class="profile-image">
+                        </div>
+                        <div class="hero-text">
+                            <h1 class="hero-title">MoJa Ardestani</h1>
+                            <!-- <div style="display: flex; gap: 20px; justify-content: center; align-items: center;"> -->
+                            <p class="hero-subtitle">Applied ML Researcher</p>
+                            <!-- <p class="hero-subtitle" style="font-size: 1.1em;">LLMs, RAG, Agentic Systems</p> -->
+                            <!-- </div> -->
+                            <p class="hero-description">
+                                Focused on <b>Deep Learning</b>, <b>NLP</b>, and <b>LLMs</b>, with expertise in <b>RAG</b> and <b>Agentic Systems</b>, delivering <b>scalable</b>, <b>reliable solutions</b> that turn ideas into real-world impact.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#about" class="btn btn-primary" onclick="showTab('about')">About Me</a>
+                                <a href="cv.pdf" download class="btn btn-secondary">
+                                    <i class="fas fa-download"></i> Download CV
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-text">
-                    <h1 class="hero-title">MoJa Ardestani</h1>
-                    <p class="hero-subtitle">Applied ML Researcher</p>
-                    <p class="hero-description">
-                        Specializing in Deep Learning, NLP, and LLMs with a strong foundation in evaluation pipelines, 
-                        ML system design, and ethical deployment. Experienced in turning ideas into scalable, reliable solutions.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">About Me</a>
-                        <a href="cv.pdf" download class="btn btn-secondary">
-                            <i class="fas fa-download"></i>
-                            Download CV
-                        </a>
+            </section>
+        </div>
+
+        <!-- About Tab -->
+        <div id="about" class="tab-content">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: justify;">
+                            <p>
+                                I am an AI researcher and applied scientist working at the intersection of <b>Deep Learning</b>, <b>Natural Language Processing (NLP)</b>, and <b>Large Language Models (LLMs)</b>. My work bridges academic research and real-world
+                                applications, covering structured and unstructured data and addressing challenges in supervised, unsupervised, and retrieval-augmented learning.
+                            </p>
+
+                            <p>
+                                I have contributed to <b>architecture design</b>, <b>technical scoping</b>, and <b>ML solution development</b> across academic and industry projects. Beyond hands-on experimentation, I bring experience in cross-functional
+                                communication and stakeholder collaboration, with a strong emphasis on <b>ethical deployment</b>—including bias mitigation, factual consistency, explainability, and robustness. These experiences reflect my commitment to
+                                building principled AI and creating <b>scalable, trustworthy systems</b> for dynamic environments.
+                            </p>
+
+                            <p>
+                                Currently completing my Master of Science in Computing Science at the <b>University of Alberta</b>, I focus on <b>evaluation frameworks for LLM outputs</b>, <b>system design for Retrieval-Augmented Generation (RAG)</b>,
+                                and strategies for <b>responsible GenAI deployment</b>. I am passionate about advancing interpretable, reliable AI systems that align with human values and drive high-impact applications.
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </section>
+        </div>
+
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content">
+            <!-- Professional Experience Section -->
+            <div id="professional-experience" class="experience-subtab active">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Professional Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">AI Research Planning & Initiation (AIRPI)</h3>
+                                        <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2025/7 - Present</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Designing searchable knowledge base for RAG systems aligned with business needs</li>
+                                        <li>Evaluating classification methods to improve metadata quality and enable effective cross-format retrieval</li>
+                                        <li>Collaborating cross-functionally with scientists and product managers to define roadmap milestones</li>
+                                        <li>Investigating feedback mechanisms to continuously improve system performance and usability</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Client Coaching - Startup Mentorship</h3>
+                                        <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2024/12 - 2025/05</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Advised startups on LLM system design, supporting ideation, architecture, and deployment planning</li>
+                                        <li>Provided mentorship on fine-tuning and RAG, adapting recommendations to client constraints</li>
+                                        <li>Guided ethical LLM deployment, including bias mitigation and output safety in real-world use cases</li>
+                                        <li>Explained ML strategies to both technical and non-technical team members to support informed decisions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Project Validation - Technical Advisement</h3>
+                                        <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2024/1 - 2024/4</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Advised on designing an LLM-based pipeline for automated report generation using a RAG framework</li>
+                                        <li>Supported evaluation of factual accuracy, addressing hallucination and explainability</li>
+                                        <li>Recommended strategies for embedding fine-tuning to improve domain-specific retrieval</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Research & Development Intern</h3>
+                                        <span style="color: #666;">Amirkabir University of Technology, Tehran, Iran &mdash; 2021/4 - 2023/5</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Developed and deployed an advanced hybrid book recommendation system for Taaghche</li>
+                                        <li>Combined word embeddings with fine-tuned BERT + CNN, boosting recommendation relevance by ~20%</li>
+                                        <li>Used Siamese networks for pairwise similarity scoring, enhancing cold-start and long-tail ranking</li>
+                                        <li>Applied SVR and KNN as fallback models to handle sparse user data, reducing false negatives by ~15%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Research Experience Section -->
+            <div id="research-experience" class="experience-subtab">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Research Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Research Assistant</h3>
+                                        <span style="color: #666;">University of Alberta, Edmonton, Canada &mdash; 2024/2 - Present</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Proposed a recall evaluation pipeline for LLM-generated answers in free-form and list-based QA</li>
+                                        <li>Developed a modular system combining fact extraction, candidate selection, and entailment checking</li>
+                                        <li>Applied the pipeline to high-stakes domains such as law and medicine, emphasizing factual completeness</li>
+                                        <li>Achieved up to +40% F1 improvement over lexical baselines and +30% over holistic prompting</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Research Intern</h3>
+                                        <span style="color: #666;">AGH University of Science and Technology, Krakow, Poland &mdash; 2022/7 - 2023/2</span>
+                                    </div>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Studied overfitting mitigation in incremental learning via custom adaptation and weighting strategies</li>
+                                        <li>Proposed dynamic backpropagation weights based on inverse cluster size via incremental clustering</li>
+                                        <li>Designed learning schemes tailored to changing data distributions in long-term tasks</li>
+                                        <li>Improved model generalization in evolving data environments through adaptive optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Teaching Experience Section -->
+            <div id="teaching-experience" class="experience-subtab">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Teaching Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-line"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Teaching Assistant</h3>
+                                        <span style="color: #666;">University of Alberta, Edmonton, Canada &mdash; 2023/9 - 2025/4</span>
+                                    </div>
+                                    <p style="margin-bottom: 8px;">Supporting undergraduate and graduate students in computing science courses, providing guidance on assignments and projects.</p>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Conducted office hours and tutorial sessions for various computing science courses</li>
+                                        <li>Graded assignments and provided detailed feedback on student work</li>
+                                        <li>Mentored students on research projects and final course projects</li>
+                                        <li>Assisted in developing course materials and practice problems</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Machine Learning Instructor</h3>
+                                        <span style="color: #666;">Tehran Institute of Technology, Tehran, Iran &mdash; 2021/4 - 2023/5</span>
+                                    </div>
+                                    <p style="margin-bottom: 8px;">Teaching machine learning concepts and practical applications to students at the Tehran Institute of Technology.</p>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Designed and delivered comprehensive machine learning curriculum</li>
+                                        <li>Taught fundamental concepts including supervised and unsupervised learning</li>
+                                        <li>Guided students through hands-on projects and practical implementations</li>
+                                        <li>Provided mentorship on machine learning applications and best practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-circle"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header" style="margin-bottom: 8px;">
+                                        <h3 style="margin: 0; font-size: 1.2em;">Teaching Assistant</h3>
+                                        <span style="color: #666;">Amirkabir University of Technology, Tehran, Iran &mdash; 2019/9 - 2022/4</span>
+                                    </div>
+                                    <p style="margin-bottom: 8px;">Supporting undergraduate students in computer engineering and computing science courses.</p>
+                                    <ul style="margin: 0 0 0 18px;">
+                                        <li>Assisted professors in various computer engineering courses</li>
+                                        <li>Conducted laboratory sessions and provided technical support</li>
+                                        <li>Graded assignments and provided constructive feedback</li>
+                                        <li>Helped students understand complex technical concepts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content" style="display: flex; flex-direction: column; align-items: center;">
-                <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: justify;">
-                    <p>
-                        I am an AI researcher and applied scientist specializing in Deep Learning, 
-                        Natural Language Processing (NLP), and Large Language Models (LLMs). 
-                        With a strong foundation in both theory and practice, my work bridges academic research and real-world impact—spanning structured 
-                        and unstructured data, and tackling challenges in supervised, unsupervised, and 
-                        retrieval-augmented learning.
-                    </p>
-                    <p>
-                        I’ve contributed to architecture design, technical scoping, and ML solution development across academic and industry projects. 
-                        My work includes cross-functional communication, stakeholder coordination, and hands-on experimentation, with emphasis on ethical deployment—addressing bias, factual consistency, explainability, and robustness. 
-                        These experiences have strengthened my commitment to principled AI and the creation of scalable, trustworthy systems in dynamic, interdisciplinary environments.
-                    </p>
-                    
-                    
-                    
-                    <p>
-                        Currently completing my Master of Science in Computing Science at the 
-                        University of Alberta, I focus on evaluation frameworks for LLM-generated content, 
-                        system design for Retrieval-Augmented Generation (RAG), and strategies for deploying GenAI responsibly. 
-                        I'm passionate about building interpretable, reliable AI systems that align with human values and high-impact applications.
-                    </p>
-                    
-                    
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Notable Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Triple and Event Extraction using Few-Shot & CoT Techniques</h3>
+                                <a href="https://github.com/jai-riley/CMPUT656_Project" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <p>Enhanced LLMs for knowledge graph construction via prompt-based alignment for factual consistency. Developed an automated evaluation framework for scalable assessment of generated outputs.</p>
+                            <div class="project-tags">
+                                <span class="tag">LLMs</span>
+                                <span class="tag">Knowledge Graphs</span>
+                                <span class="tag">CoT Prompting</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Explanation Generation for SQL Queries</h3>
+                                <a href="https://github.com/MoJa-Ardestani/University_Docs/tree/main/Research/Master_Project/paper" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <p>Developed a system for generating explanations of SQL queries from natural language questions using Spider and BIRD datasets with LLMs to generate and evaluate SQL queries.</p>
+                            <div class="project-tags">
+                                <span class="tag">SQL Generation</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">LLMs</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Medical Image Processing - COVID-19 Detection</h3>
+                                <a href="https://github.com/MohammadJavadArdestani/Medical-Image-Processing" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <p>Implemented COVID-19 Detection via Lung X-Ray Classification using DenseNet-121 for efficient transfer learning and feature extraction from medical images.</p>
+                            <div class="project-tags">
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">DenseNet</span>
+                                <span class="tag">Medical AI</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Data Mining Projects Collection</h3>
+                                <a href="https://github.com/MohammadJavadArdestani/Data-Mining-projects" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <p>Collection of data mining projects including Diabetes Risk Prediction with XGBoost, Neural Network Classifiers, Frequent Pattern Mining, and Cluster Analysis using DBSCAN & K-means.</p>
+                            <div class="project-tags">
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Clustering</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Professional Experience Section -->
-    <section id="professional-experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">AI Research Planning & Initiation (AIRPI)</h3>
-                            <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2025/7 - Present</span>
+        <!-- Skills Tab -->
+        <div id="skills" class="tab-content">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="skills-list-container">
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-code"></i> Programming Languages
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-item">Python</span>
+                                <span class="skill-item">C++</span>
+                                <span class="skill-item">Java</span>
+                            </div>
                         </div>
-                        <!-- <p style="margin-bottom: 8px;">Designing and planning searchable knowledge base for RAG systems, evaluating classification methods to improve metadata quality, and collaborating cross-functionally with scientists and product managers.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Designing searchable knowledge base for RAG systems aligned with business needs</li>
-                            <li>Evaluating classification methods to improve metadata quality and enable effective cross-format retrieval</li>
-                            <li>Collaborating cross-functionally with scientists and product managers to define roadmap milestones</li>
-                            <li>Investigating feedback mechanisms to continuously improve system performance and usability</li>
-                        </ul>
+
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-brain"></i> Machine Learning & NLP
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-item">PyTorch</span>
+                                <span class="skill-item">TensorFlow</span>
+                                <span class="skill-item">Hugging Face</span>
+                                <span class="skill-item">LangChain</span>
+                                <span class="skill-item">scikit-learn</span>
+                                <span class="skill-item">Transformers</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-cloud"></i> Infrastructure & Cloud
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-item">Docker</span>
+                                <span class="skill-item">AWS</span>
+                                <span class="skill-item">Google Cloud</span>
+                                <span class="skill-item">Vector Databases</span>
+                                <span class="skill-item">Kubernetes</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-tools"></i> Data & Tools
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-item">Pandas</span>
+                                <span class="skill-item">NumPy</span>
+                                <span class="skill-item">Git</span>
+                                <span class="skill-item">LaTeX</span>
+                                <span class="skill-item">Linux</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Client Coaching - Startup Mentorship</h3>
-                            <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2024/12 - 2025/05</span>
-                        </div>
-                        <!-- <p style="margin-bottom: 8px;">Advising startups on LLM system design, supporting ideation, architecture, and deployment planning with focus on ethical AI deployment.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Advised startups on LLM system design, supporting ideation, architecture, and deployment planning</li>
-                            <li>Provided mentorship on fine-tuning and RAG, adapting recommendations to client constraints</li>
-                            <li>Guided ethical LLM deployment, including bias mitigation and output safety in real-world use cases</li>
-                            <li>Explained ML strategies to both technical and non-technical team members to support informed decisions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Project Validation - Technical Advisement</h3>
-                            <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2024/1 - 2024/4</span>
-                        </div>
-                        <!-- <p style="margin-bottom: 8px;">Advised on designing an LLM-based pipeline for automated report generation using a RAG framework.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Advised on designing an LLM-based pipeline for automated report generation using a RAG framework</li>
-                            <li>Supported evaluation of factual accuracy, addressing hallucination and explainability</li>
-                            <li>Recommended strategies for embedding fine-tuning to improve domain-specific retrieval</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Research & Development Intern</h3>
-                            <span style="color: #666;">Amirkabir University of Technology, Tehran, Iran &mdash; 2021/4 - 2023/5</span>
-                        </div>
-                        <!-- <p style="margin-bottom: 8px;">Developed and deployed an advanced hybrid book recommendation system for Taaghche, combining word embeddings with fine-tuned BERT + CNN.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Developed and deployed an advanced hybrid book recommendation system for Taaghche</li>
-                            <li>Combined word embeddings with fine-tuned BERT + CNN, boosting recommendation relevance by ~20%</li>
-                            <li>Used Siamese networks for pairwise similarity scoring, enhancing cold-start and long-tail ranking</li>
-                            <li>Applied SVR and KNN as fallback models to handle sparse user data, reducing false negatives by ~15%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Research Experience Section -->
-    <section id="research-experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Research Experience</h2>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Research Assistant</h3>
-                            <span style="color: #666;">University of Alberta, Edmonton, Canada &mdash; 2024/2 - Present</span>
+        <!-- Leadership Tab -->
+        <div id="leadership" class="tab-content">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Leadership & Community</h2>
+                    <div class="leadership-grid">
+                        <div class="leadership-card">
+                            <div class="leadership-header">
+                                <h3>Director of External Relations & Partnerships</h3>
+                                <span class="leadership-organization">CSGSA, University of Alberta</span>
+                                <span class="leadership-period">2024 - 2025</span>
+                            </div>
+                            <p>Leading external partnerships and relationship building for the Computing Science Graduate Students' Association.</p>
+                            <div class="leadership-links">
+                                <a href="https://sites.google.com/ualberta.ca/csgsa/" class="leadership-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Visit Organization
+                                </a>
+                            </div>
                         </div>
-                        <!-- <p style="margin-bottom: 8px;">Proposed a recall evaluation pipeline for LLM-generated answers in free-form and list-based QA, achieving up to +40% F1 improvement over lexical baselines.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Proposed a recall evaluation pipeline for LLM-generated answers in free-form and list-based QA</li>
-                            <li>Developed a modular system combining fact extraction, candidate selection, and entailment checking</li>
-                            <li>Applied the pipeline to high-stakes domains such as law and medicine, emphasizing factual completeness</li>
-                            <li>Achieved up to +40% F1 improvement over lexical baselines and +30% over holistic prompting</li>
-                        </ul>
+
+                        <div class="leadership-card">
+                            <div class="leadership-header">
+                                <h3>Director of Competitions & Events Committee</h3>
+                                <span class="leadership-organization">SSC, Amirkabir University of Technology</span>
+                                <span class="leadership-period">2020 - 2022</span>
+                            </div>
+                            <p>Managed and organized academic competitions, hackathons, and technical events for the Student Scientific Chapter.</p>
+                            <div class="leadership-links">
+                                <a href="https://github.com/ceit-ssc" class="leadership-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Visit Organization
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="leadership-card">
+                            <div class="leadership-header">
+                                <h3>Director of Scientific Committee</h3>
+                                <span class="leadership-organization">Amirkabir Artificial Intelligence Summit</span>
+                                <span class="leadership-period">2020 - 2021</span>
+                            </div>
+                            <p>Led the scientific committee for one of Iran's premier AI conferences, overseeing research presentations and technical content.</p>
+                            <div class="leadership-links">
+                                <a href="https://aut.ac.ir/content/323/Amirkabir-Artificial-Intelligence-Summer-Summit-_YW_PAR_OPEN_AAISS_YW_PAR_CLOSE_" class="leadership-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Visit Summit
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Research Intern</h3>
-                            <span style="color: #666;">AGH University of Science and Technology, Krakow, Poland &mdash; 2022/7 - 2023/2</span>
-                        </div>
-                        <!-- <p style="margin-bottom: 8px;">Studied overfitting mitigation in incremental learning via custom adaptation and weighting strategies, improving model generalization in evolving data environments.</p> -->
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Studied overfitting mitigation in incremental learning via custom adaptation and weighting strategies</li>
-                            <li>Proposed dynamic backpropagation weights based on inverse cluster size via incremental clustering</li>
-                            <li>Designed learning schemes tailored to changing data distributions in long-term tasks</li>
-                            <li>Improved model generalization in evolving data environments through adaptive optimization</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Teaching Experience Section -->
-    <section id="teaching-experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Teaching Experience</h2>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Teaching Assistant</h3>
-                            <span style="color: #666;">University of Alberta, Edmonton, Canada &mdash; 2023/9 - 2025/4</span>
+        <!-- Contact Tab -->
+        <div id="contact" class="tab-content">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <a href="mailto:ardestan@ualberta.ca" class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/mohammad-javad-ardestani" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h3>LinkedIn</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/MohammadJavadArdestani" target="_blank" class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h3>GitHub</h3>
+                                </div>
+                            </a>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Edmonton, Alberta, Canada</p>
+                                </div>
+                            </div>
                         </div>
-                        <p style="margin-bottom: 8px;">Supporting undergraduate and graduate students in computing science courses, providing guidance on assignments and projects.</p>
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Conducted office hours and tutorial sessions for various computing science courses</li>
-                            <li>Graded assignments and provided detailed feedback on student work</li>
-                            <li>Mentored students on research projects and final course projects</li>
-                            <li>Assisted in developing course materials and practice problems</li>
-                        </ul>
-                    </div>
-                </div>
+                        <form id="contactForm" class="contact-form">
+                            <input type="hidden" name="access_key" value="c271c0f5-6676-46da-9b5d-efadb57a22dc">
+                            <input type="hidden" name="subject" value="New Contact Form Message from Portfolio">
+                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Machine Learning Instructor</h3>
-                            <span style="color: #666;">Tehran Institute of Technology, Tehran, Iran &mdash; 2021/4 - 2023/5</span>
-                        </div>
-                        <p style="margin-bottom: 8px;">Teaching machine learning concepts and practical applications to students at the Tehran Institute of Technology.</p>
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Designed and delivered comprehensive machine learning curriculum</li>
-                            <li>Taught fundamental concepts including supervised and unsupervised learning</li>
-                            <li>Guided students through hands-on projects and practical implementations</li>
-                            <li>Provided mentorship on machine learning applications and best practices</li>
-                        </ul>
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="display: block !important; visibility: visible !important; opacity: 1 !important;">Send Message</button>
+                            <div id="contactMessage" class="contact-message" style="display: none;"></div>
+                        </form>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-circle"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header" style="margin-bottom: 8px;">
-                            <h3 style="margin: 0; font-size: 1.2em;">Teaching Assistant</h3>
-                            <span style="color: #666;">Amirkabir University of Technology, Tehran, Iran &mdash; 2019/9 - 2022/4</span>
-                        </div>
-                        <p style="margin-bottom: 8px;">Supporting undergraduate students in computer engineering and computing science courses.</p>
-                        <ul style="margin: 0 0 0 18px;">
-                            <li>Assisted professors in various computer engineering courses</li>
-                            <li>Conducted laboratory sessions and provided technical support</li>
-                            <li>Graded assignments and provided constructive feedback</li>
-                            <li>Helped students understand complex technical concepts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <!-- Research Section -->
-    <!-- <section id="research" class="section">
-        <div class="container">
-            <h2 class="section-title">Research & Publications</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-header">
-                        <h3>LongRecall: A Structured Approach for Robust Recall Evaluation in Long-Form Text</h3>
-                        <span class="research-status">Under Review</span>
-                    </div>
-                    <div class="research-authors">
-                        <strong>Authors:</strong> MohammadJavad Ardestani, Ehsan Kamalloo, and Davood Rafiei
-                    </div>
-                    <div class="research-description">
-                        <p>Long Paper, Submitted to EMNLP 2025. A structured approach for robust recall evaluation in long-form text, focusing on factual completeness and accuracy in LLM-generated responses.</p>
-                    </div>
-                    <div class="research-links">
-                        <a href="#" class="research-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="#" class="research-link" target="_blank">
-                            <i class="fab fa-github"></i> Code
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="research-card">
-                    <div class="research-header">
-                        <h3>Recall Evaluation Pipeline for LLM-Generated Answers</h3>
-                        <span class="research-status">In Progress</span>
-                    </div>
-                    <div class="research-authors">
-                        <strong>Authors:</strong> MohammadJavad Ardestani, University of Alberta
-                    </div>
-                    <div class="research-description">
-                        <p>Developing a modular system combining fact extraction, candidate selection, and entailment checking for evaluating factual completeness in high-stakes domains like law and medicine.</p>
-                    </div>
-                    <div class="research-links">
-                        <a href="#" class="research-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="research-card">
-                    <div class="research-header">
-                        <h3>Incremental Learning with Overfitting Mitigation</h3>
-                        <span class="research-status">Completed</span>
-                    </div>
-                    <div class="research-authors">
-                        <strong>Authors:</strong> MohammadJavad Ardestani, AGH University of Science and Technology
-                    </div>
-                    <div class="research-description">
-                        <p>Investigated overfitting in incremental learning by customizing adaptation algorithms and proposing dynamic weighting schemes during backpropagation for improved generalization.</p>
-                    </div>
-                    <div class="research-links">
-                        <a href="#" class="research-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  -->
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Notable Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Triple and Event Extraction using Few-Shot & CoT Techniques</h3>
-                        <a href="https://github.com/jai-riley/CMPUT656_Project" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Enhanced LLMs for knowledge graph construction via prompt-based alignment for factual consistency. Developed an automated evaluation framework for scalable assessment of generated outputs.</p>
-                    <div class="project-tags">
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Knowledge Graphs</span>
-                        <span class="tag">CoT Prompting</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Explanation Generation for SQL Queries</h3>
-                        <a href="https://github.com/MoJa-Ardestani/University_Docs/tree/main/Research/Master_Project/paper" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Developed a system for generating explanations of SQL queries from natural language questions using Spider and BIRD datasets with LLMs to generate and evaluate SQL queries.</p>
-                    <div class="project-tags">
-                        <span class="tag">SQL Generation</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">LLMs</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Medical Image Processing - COVID-19 Detection</h3>
-                        <a href="https://github.com/MohammadJavadArdestani/Medical-Image-Processing" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Implemented COVID-19 Detection via Lung X-Ray Classification using DenseNet-121 for efficient transfer learning and feature extraction from medical images.</p>
-                    <div class="project-tags">
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">DenseNet</span>
-                        <span class="tag">Medical AI</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Data Mining Projects Collection</h3>
-                        <a href="https://github.com/MohammadJavadArdestani/Data-Mining-projects" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Collection of data mining projects including Diabetes Risk Prediction with XGBoost, Neural Network Classifiers, Frequent Pattern Mining, and Cluster Analysis using DBSCAN & K-means.</p>
-                    <div class="project-tags">
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Clustering</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-list-container">
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Programming Languages
-                    </h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">C++</span>
-                        <span class="skill-item">Java</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-brain"></i>
-                        Machine Learning & NLP
-                    </h3>
-                    <div class="skill-items">
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">Hugging Face</span>
-                        <span class="skill-item">LangChain</span>
-                        <span class="skill-item">scikit-learn</span>
-                        <span class="skill-item">Transformers</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-cloud"></i>
-                        Infrastructure & Cloud
-                    </h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Google Cloud</span>
-                        <span class="skill-item">Vector Databases</span>
-                        <span class="skill-item">Kubernetes</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-tools"></i>
-                        Data & Tools
-                    </h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">LaTeX</span>
-                        <span class="skill-item">Linux</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Leadership & Community Section -->
-    <section id="leadership" class="section">
-        <div class="container">
-            <h2 class="section-title">Leadership & Community</h2>
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <div class="leadership-header">
-                        <h3>Director of External Relations & Partnerships</h3>
-                        <span class="leadership-organization">CSGSA, University of Alberta</span>
-                        <span class="leadership-period">2024 - 2025</span>
-                    </div>
-                    <p>Leading external partnerships and relationship building for the Computing Science Graduate Students' Association.</p>
-                    <div class="leadership-links">
-                        <a href="https://sites.google.com/ualberta.ca/csgsa/" class="leadership-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Visit Organization
-                        </a>
-                    </div>
-                </div>
-
-                <div class="leadership-card">
-                    <div class="leadership-header">
-                        <h3>Director of Competitions & Events Committee</h3>
-                        <span class="leadership-organization">SSC, Amirkabir University of Technology</span>
-                        <span class="leadership-period">2020 - 2022</span>
-                    </div>
-                    <p>Managed and organized academic competitions, hackathons, and technical events for the Student Scientific Chapter.</p>
-                    <div class="leadership-links">
-                        <a href="https://github.com/ceit-ssc" class="leadership-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Visit Organization
-                        </a>
-                    </div>
-                </div>
-
-                <div class="leadership-card">
-                    <div class="leadership-header">
-                        <h3>Director of Scientific Committee</h3>
-                        <span class="leadership-organization">Amirkabir Artificial Intelligence Summit</span>
-                        <span class="leadership-period">2020 - 2021</span>
-                    </div>
-                    <p>Led the scientific committee for one of Iran's premier AI conferences, overseeing research presentations and technical content.</p>
-                    <div class="leadership-links">
-                        <a href="https://aut.ac.ir/content/323/Amirkabir-Artificial-Intelligence-Summer-Summit-_YW_PAR_OPEN_AAISS_YW_PAR_CLOSE_" class="leadership-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Visit Summit
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:ardestan@ualberta.ca" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <!-- <p>ardestan@ualberta.ca</p> -->
-                        </div>
-                    </a>
-                    <a href="https://linkedin.com/in/mohammad-javad-ardestani" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <!-- <p>linkedin.com/in/mohammad-javad-ardestani</p> -->
-                        </div>
-                    </a>
-                    <a href="https://github.com/MohammadJavadArdestani" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <!-- <p>github.com/MohammadJavadArdestani</p> -->
-                        </div>
-                    </a>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Edmonton, Alberta, Canada</p>
-                        </div>
-                    </div>
-                </div>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MoJa Ardestani</h3>
-                    <p>Machine Learning Researcher & Applied Scientist</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/mohammad-javad-ardestani" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/MohammadJavadArdestani" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:ardestan@ualberta.ca"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MoJa Ardestani. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </main>
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active class from all sidebar links
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            sidebarLinks.forEach(link => link.classList.remove('active'));
+
+            // Show selected tab
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // Add active class to clicked sidebar link
+            const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Scroll to top of the page for better user experience
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+
+        // Experience sub-tab functionality
+        function showExperienceSubTab(subTabName) {
+            // Hide all experience sub-tabs
+            const experienceSubTabs = document.querySelectorAll('.experience-subtab');
+            experienceSubTabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active class from all dropdown links
+            const dropdownLinks = document.querySelectorAll('.sidebar-dropdown-link');
+            dropdownLinks.forEach(link => link.classList.remove('active'));
+
+            // Show selected sub-tab
+            const selectedSubTab = document.getElementById(subTabName);
+            if (selectedSubTab) {
+                selectedSubTab.classList.add('active');
+            }
+
+            // Add active class to clicked dropdown link
+            const activeDropdownLink = document.querySelector(`[data-tab="${subTabName}"]`);
+            if (activeDropdownLink) {
+                activeDropdownLink.classList.add('active');
+            }
+
+            // Scroll to top of the page for better user experience
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Sidebar dropdown functionality
+        function toggleSidebarDropdown(menuItem) {
+            const sidebarItem = menuItem.closest('.sidebar-item');
+            const isOpen = sidebarItem.classList.contains('open');
+
+            // Close all other dropdowns
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.classList.remove('open');
+            });
+
+            // Toggle current dropdown
+            if (!isOpen) {
+                sidebarItem.classList.add('open');
+            }
+        }
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+
+        function closeMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+        }
+
+        // Add click event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar navigation links
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabName = this.getAttribute('data-tab');
+
+                    // If it's the experience tab, don't change tabs, just show the first sub-tab
+                    if (tabName === 'experience') {
+                        showTab('experience');
+                        showExperienceSubTab('professional-experience');
+                        toggleSidebarDropdown(this);
+                    } else {
+                        showTab(tabName);
+                    }
+                });
+            });
+
+            // Experience dropdown links
+            const dropdownLinks = document.querySelectorAll('.sidebar-dropdown-link');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const subTabName = this.getAttribute('data-tab');
+                    showExperienceSubTab(subTabName);
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close menu when clicking overlay
+            const overlay = document.getElementById('sidebarOverlay');
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+
+    <!-- AI Background Animation Script -->
+    <script>
+        // Simple working animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('ai-bg');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let animationId;
+
+            // Set canvas size
+            function resizeCanvas() {
+                const homeSection = document.getElementById('home');
+                if (homeSection) {
+                    canvas.width = homeSection.offsetWidth;
+                    canvas.height = homeSection.offsetHeight;
+                }
+            }
+
+            // Create particles
+            const particles = [];
+            const particleCount = 60;
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 0.5;
+                    this.vy = (Math.random() - 0.5) * 0.5;
+                    this.size = Math.random() * 2 + 1;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    // Wrap around edges
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                    if (this.y > canvas.height) this.y = 0;
+                }
+
+                draw() {
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            // Initialize particles
+            function initParticles() {
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            // Draw connecting lines
+            function drawConnections(pulse = 1) {
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 0.3; // Thinner lines for more delicate network feel
+
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 150) { // Increased connection radius for more neural network feel
+                            const opacity = (1 - (distance / 150)) * pulse; // Apply pulse effect
+                            const lineWidth = 0.3 + (opacity * 0.7); // Varying line thickness
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.25})`;
+                            ctx.lineWidth = lineWidth;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Add subtle pulsing effect
+                const time = Date.now() * 0.001;
+                const pulse = Math.sin(time * 2) * 0.1 + 0.9;
+
+                // Update and draw particles
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                // Draw connections with pulsing effect
+                drawConnections(pulse);
+
+                animationId = requestAnimationFrame(animate);
+            }
+
+            // Start animation
+            function startAnimation() {
+                resizeCanvas();
+                initParticles();
+                animate();
+            }
+
+            // Stop animation
+            function stopAnimation() {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                }
+            }
+
+            // Handle tab switching
+            function handleTabChange() {
+                const homeTab = document.getElementById('home');
+                if (homeTab.classList.contains('active')) {
+                    startAnimation();
+                } else {
+                    stopAnimation();
+                }
+            }
+
+            // Initialize
+            resizeCanvas();
+            startAnimation();
+
+            // Event listeners
+            window.addEventListener('resize', resizeCanvas);
+
+            // Watch for tab changes
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        handleTabChange();
+                    }
+                });
+            });
+
+            const homeTab = document.getElementById('home');
+            if (homeTab) {
+                observer.observe(homeTab, {
+                    attributes: true
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
