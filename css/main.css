@@ -41,6 +41,28 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.affiliation {
+    text-align: center;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.affiliation .institution {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.affiliation .role {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
 .header-social-icons {
     display: flex;
     gap: 12px;
@@ -2145,6 +2167,16 @@ body {
     }
     .sidebar-header {
         padding: 20px 15px;
+    }
+    .affiliation {
+        margin: 12px 0;
+        padding: 0 15px;
+    }
+    .affiliation .institution {
+        font-size: 0.85rem;
+    }
+    .affiliation .role {
+        font-size: 0.75rem;
     }
     .header-social-icons {
         margin-top: 15px;
