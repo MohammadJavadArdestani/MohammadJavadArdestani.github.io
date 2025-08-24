@@ -315,6 +315,172 @@ body {
     animation: fadeIn 0.3s ease-in-out;
 }
 
+
+/* Education Section Styles */
+
+.education-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.education-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.education-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: white;
+    border: 2px solid #e5e7eb;
+}
+
+.university-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.education-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 8px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.education-info .location {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.education-info .degree {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 5px 0;
+}
+
+.education-info .specialization {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0 0 5px 0;
+    font-style: italic;
+}
+
+.education-info .timeline {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin: 0 0 8px 0;
+}
+
+.education-info .gpa {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.coursework-section {
+    margin: 25px 0;
+}
+
+.coursework-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 3px solid #3b82f6;
+}
+
+.course-name {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.grade {
+    background: #10b981;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.thesis-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.thesis-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 12px 0;
+}
+
+.thesis-title {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 3px solid #10b981;
+}
+
 .tab-content.active {
     display: block;
 }
@@ -2092,6 +2258,31 @@ body {
     }
     .dashboard-header {
         padding: 20px;
+    }
+    /* Mobile Education Styles */
+    .education-item {
+        padding: 25px 20px;
+        margin-bottom: 25px;
+    }
+    .education-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .education-logo {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .university-logo {
+        padding: 3px;
+    }
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .course-item {
+        padding: 10px 12px;
     }
 }
 
