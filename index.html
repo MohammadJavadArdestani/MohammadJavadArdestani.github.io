@@ -250,7 +250,7 @@
                                     <h3>University of Alberta</h3>
                                     <p class="location">Edmonton, Canada</p>
                                     <p class="degree">M.Sc. in Computing Science</p>
-                                    <p class="timeline">Expected Dec 2025</p>
+                                    <p class="timeline">Expected Sept 2025</p>
                                     <p class="gpa">GPA: 4.0 / 4.0</p>
                                 </div>
                             </div>
@@ -372,6 +372,7 @@
                                         <span style="color: #666;">Amii, Edmonton, Canada &mdash; 2024/12 - 2025/05</span>
                                     </div>
                                     <ul style="margin: 0 0 0 18px;">
+                                        <li>Coached the design and refinement of healthcare-related chatbots, ensuring safe and reliable deployment in sensitive domains.</li>
                                         <li>Advised startups on LLM system design, supporting ideation, architecture, and deployment planning</li>
                                         <li>Provided mentorship on fine-tuning and RAG, adapting recommendations to client constraints</li>
                                         <li>Guided ethical LLM deployment, including bias mitigation and output safety in real-world use cases</li>
@@ -963,7 +964,7 @@
 
             // Create particles
             const particles = [];
-            const particleCount = 60;
+            const particleCount = 50;
 
             class Particle {
                 constructor() {
@@ -1014,7 +1015,7 @@
                         if (distance < 150) { // Increased connection radius for more neural network feel
                             const opacity = (1 - (distance / 150)) * pulse; // Apply pulse effect
                             const lineWidth = 0.3 + (opacity * 0.7); // Varying line thickness
-                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.25})`;
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.2})`;
                             ctx.lineWidth = lineWidth;
                             ctx.beginPath();
                             ctx.moveTo(particles[i].x, particles[i].y);

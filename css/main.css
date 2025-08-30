@@ -649,7 +649,7 @@ body {
 }
 
 .admin-login button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -660,7 +660,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -729,7 +729,7 @@ body {
 }
 
 .dashboard-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding: 25px 30px;
     border-radius: 20px 20px 0 0;
@@ -778,14 +778,14 @@ body {
 }
 
 .tab-btn.active {
-    color: #667eea;
-    border-bottom-color: #667eea;
+    color: #1e3a8a;
+    border-bottom-color: #1e3a8a;
     background-color: white;
 }
 
 .tab-btn:hover {
-    color: #667eea;
-    background-color: rgba(102, 126, 234, 0.1);
+    color: #1e3a8a;
+    background-color: rgba(30, 58, 138, 0.1);
 }
 
 .dashboard-body {
@@ -815,7 +815,7 @@ body {
 
 .section-selector select:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #1e3a8a;
 }
 
 .action-buttons {
@@ -840,13 +840,13 @@ body {
 }
 
 .edit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
 }
 
 .edit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
 }
 
 .add-btn {
@@ -888,7 +888,7 @@ body {
 
 #contentEditor:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #1e3a8a;
 }
 
 .editor-actions {
@@ -1020,7 +1020,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding-top: 70px;
 }
@@ -1461,7 +1461,7 @@ body {
 }
 
 .tag {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -1768,7 +1768,7 @@ body {
 }
 
 .stat {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
