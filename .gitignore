@@ -19,7 +19,7 @@ serve.py
 *.toc
 *.pdf
 *.md
-
+*.tex
 # IDE and Editor Files
 .vscode/
 .idea/
