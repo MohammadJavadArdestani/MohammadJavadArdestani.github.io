@@ -1,3 +1,12 @@
+/* ============================================
+   ELEGANT PROFESSIONAL THEME
+   Color Palette:
+   - Primary: Deep Navy (#0f172a, #1e293b)
+   - Secondary: Teal/Emerald (#0d9488, #14b8a6)
+   - Accent: Gold/Amber (#f59e0b, #d97706)
+   - Background: Warm whites (#fafaf9, #f5f5f4)
+   ============================================ */
+
 /* Reset and Base Styles */
 
 * {
@@ -13,8 +22,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8fafc;
+    color: #1e293b;
+    background-color: #0f172a;
     display: flex;
 }
 
@@ -24,7 +33,7 @@ body {
 .sidebar {
     width: 280px;
     height: 100vh;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
     color: white;
     position: fixed;
     left: 0;
@@ -34,11 +43,38 @@ body {
     box-shadow: none;
     display: flex;
     flex-direction: column;
+    direction: rtl; /* Right-to-left to move scrollbar to left */
+}
+
+/* Reset direction for content */
+.sidebar > * {
+    direction: ltr;
+}
+
+/* Show scrollbar temporarily for positioning */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+    background: #0f172a;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(20, 184, 166, 0.3);
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 184, 166, 0.6);
+}
+
+/* For Firefox */
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 184, 166, 0.3) #0f172a;
 }
 
 .sidebar-header {
     padding: 30px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
 }
 
 .affiliation {
@@ -148,9 +184,9 @@ body {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 184, 166, 0.15);
     color: white;
-    border-left-color: #fff;
+    border-left-color: #14b8a6;
 }
 
 .sidebar-link i {
@@ -165,12 +201,12 @@ body {
 
 .sidebar-footer {
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
     margin-top: auto;
     text-align: center;
     position: sticky;
     bottom: 0;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
     width: 100%;
 }
 
@@ -305,6 +341,9 @@ body {
     min-height: 100vh;
     background-color: #ffffff;
     box-shadow: none;
+    border: none;
+    position: relative;
+    left: -1px;
 }
 
 
@@ -328,14 +367,14 @@ body {
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #3b82f6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #14b8a6;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(20, 184, 166, 0.15);
 }
 
 .education-header {
@@ -368,7 +407,7 @@ body {
 .education-info h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #0f172a;
     margin: 0 0 8px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -401,13 +440,14 @@ body {
 }
 
 .education-info .gpa {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
     display: inline-block;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 .coursework-section {
@@ -434,9 +474,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
-    background: #f8fafc;
+    background: #fafaf9;
     border-radius: 10px;
-    border-left: 3px solid #3b82f6;
+    border-left: 3px solid #14b8a6;
 }
 
 .course-name {
@@ -446,7 +486,7 @@ body {
 }
 
 .grade {
-    background: #10b981;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     color: white;
     padding: 4px 10px;
     border-radius: 15px;
@@ -454,6 +494,7 @@ body {
     font-weight: 600;
     min-width: 30px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
 }
 
 .thesis-section {
@@ -476,9 +517,9 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 15px;
-    background: #f8fafc;
+    background: #fafaf9;
     border-radius: 10px;
-    border-left: 3px solid #10b981;
+    border-left: 3px solid #14b8a6;
 }
 
 .tab-content.active {
@@ -1020,21 +1061,37 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
     color: white;
     padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
+    grid-template-columns: 340px 1fr;
+    gap: 60px;
     align-items: center;
     justify-items: start;
 }
@@ -1048,12 +1105,34 @@ body {
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    object-position: center 20%;
+    border: none;
+    position: relative;
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, #0f172a, #14b8a6);
+    padding: 8px;
+    box-shadow: 
+        0 0 0 1px rgba(20, 184, 166, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 16px 32px rgba(0, 0, 0, 0.15),
+        0 0 60px rgba(20, 184, 166, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.profile-image:hover {
+    transform: scale(1.05) rotate(2deg);
+    padding: 8px;
+    background: linear-gradient(135deg, #14b8a6, #f59e0b);
+    box-shadow: 
+        0 0 0 1px rgba(245, 158, 11, 0.3),
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        0 24px 48px rgba(0, 0, 0, 0.2),
+        0 0 80px rgba(245, 158, 11, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .hero-text {
@@ -1145,27 +1224,30 @@ body {
 }
 
 .btn-primary {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(20, 184, 166, 0.3);
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
 }
 
 .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.4);
+    border-color: rgba(245, 158, 11, 0.5);
 }
 
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(245, 158, 11, 0.5);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(245, 158, 11, 0.15);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.8);
 }
 
 
@@ -1231,11 +1313,10 @@ body {
 .timeline-line {
     position: absolute;
     left: 10%;
-    /* Position line at 10% from left (just outside the 80% cards) */
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(to bottom, #3498db, #9b59b6);
+    background: linear-gradient(to bottom, #14b8a6, #0d9488, #f59e0b);
     z-index: 1;
 }
 
@@ -1248,16 +1329,14 @@ body {
 .timeline-circle {
     position: absolute;
     left: calc(10% - 8px);
-    /* Position bullet to align with the line (10% - half of circle width) */
     top: 30px;
-    /* Align with the top of the content */
     width: 16px;
     height: 16px;
-    background: linear-gradient(135deg, #3498db, #9b59b6);
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 0 0 4px white;
-    border: 2px solid #3498db;
+    box-shadow: 0 0 0 4px white, 0 4px 12px rgba(20, 184, 166, 0.4);
+    border: 2px solid #14b8a6;
 }
 
 .timeline-content {
@@ -1290,7 +1369,7 @@ body {
 }
 
 .timeline-company {
-    color: #3498db;
+    color: #14b8a6;
     font-weight: 500;
     font-size: 1rem;
 }
@@ -1322,7 +1401,7 @@ body {
 
 .timeline-content li::before {
     content: '▸';
-    color: #3498db;
+    color: #14b8a6;
     position: absolute;
     left: 0;
 }
@@ -1439,13 +1518,13 @@ body {
 }
 
 .project-link {
-    color: #3498db;
+    color: #14b8a6;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .project-link:hover {
-    color: #2980b9;
+    color: #f59e0b;
 }
 
 .project-card p {
@@ -1461,12 +1540,20 @@ body {
 }
 
 .tag {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
 
@@ -1508,17 +1595,17 @@ body {
     gap: 12px;
     font-size: 1.4rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #0f172a;
     margin-bottom: 15px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #14b8a6;
     position: relative;
 }
 
 .category-title i {
     font-size: 1.2rem;
-    color: #3498db;
-    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: #14b8a6;
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1531,7 +1618,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #3498db, #9b59b6);
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     transition: width 0.3s ease;
 }
 
@@ -1547,7 +1634,7 @@ body {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, #3498db, #9b59b6);
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -1555,7 +1642,14 @@ body {
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: default;
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
 
@@ -1859,7 +1953,7 @@ body {
 }
 
 .leadership-organization {
-    color: #3498db;
+    color: #14b8a6;
     font-weight: 500;
     font-size: 1rem;
     display: block;
@@ -1884,7 +1978,7 @@ body {
 }
 
 .leadership-link {
-    color: #3498db;
+    color: #14b8a6;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -1895,7 +1989,7 @@ body {
 }
 
 .leadership-link:hover {
-    color: #2980b9;
+    color: #f59e0b;
 }
 
 
@@ -1934,14 +2028,14 @@ body {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #3498db;
+    color: #14b8a6;
     min-width: 30px;
 }
 
 .contact-item h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #0f172a;
     margin-bottom: 5px;
 }
 
@@ -1975,7 +2069,8 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
 }
 
 .form-group textarea {
@@ -1987,7 +2082,7 @@ body {
 /* Contact form button styles */
 
 .contact-form .btn-primary {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
     color: white;
     border: none;
     padding: 18px 30px;
@@ -2005,13 +2100,13 @@ body {
     z-index: 10 !important;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
 }
 
 .contact-form .btn-primary:hover {
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
 }
 
 .contact-form .btn-primary:active {
