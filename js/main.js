@@ -205,19 +205,19 @@ function initAnimations() {
             if (i < text.length) {
                 heroTitle.textContent += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 100);
+                setTimeout(typeWriter, 10);
             }
         };
 
         // Start typing effect after a short delay
-        setTimeout(typeWriter, 500);
+        setTimeout(typeWriter, 250);
     }
 
     // Counter animation for stats
     const statNumbers = document.querySelectorAll('.stat-item h3');
     statNumbers.forEach(stat => {
         const target = parseInt(stat.textContent);
-        const increment = target / 50;
+        const increment = target / 400;
         let current = 0;
 
         const updateCounter = () => {
