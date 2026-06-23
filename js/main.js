@@ -205,7 +205,7 @@ function initAnimations() {
             if (i < text.length) {
                 heroTitle.textContent += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 10);
+                setTimeout(typeWriter, 80);
             }
         };
 

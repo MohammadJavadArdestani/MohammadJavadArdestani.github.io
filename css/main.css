@@ -17,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: #0f172a;
 }
 
 body {
@@ -339,7 +340,8 @@ body {
     margin-left: 280px;
     width: calc(100% - 280px);
     min-height: 100vh;
-    background-color: #ffffff;
+    /* Single global background so short sections don't expose any lighter color */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #0d9488 100%);
     box-shadow: none;
     border: none;
     position: relative;
@@ -352,6 +354,10 @@ body {
 .tab-content {
     display: none;
     animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 
@@ -1048,7 +1054,8 @@ body {
 
 .section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
+    /* Let the global main-content gradient show through for consistency */
+    background: transparent;
     color: white;
     position: relative;
     overflow: hidden;
@@ -1061,13 +1068,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    /* Keep this fully transparent so the main-content gradient looks continuous */
+    background: transparent;
     pointer-events: none;
 }
 
 .section:nth-child(even) {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #0d9488 100%);
+    background: transparent;
 }
 
 .section-title {
@@ -1287,11 +1294,18 @@ body {
     align-items: start;
 }
 
+.about-text {
+    max-width: 800px;
+}
+
 .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+    letter-spacing: 0.3px;
+    font-weight: 400;
 }
 
 .stats-grid {
@@ -1303,10 +1317,19 @@ body {
 .stat-item {
     text-align: center;
     padding: 30px 20px;
-    background: white;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.98) 0%, rgba(204, 251, 241, 0.98) 100%);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.3);
+    border-color: rgba(20, 184, 166, 0.4);
+}
 }
 
 .stat-item:hover {
@@ -1316,13 +1339,13 @@ body {
 .stat-item h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #3498db;
+    color: #14b8a6;
     margin-bottom: 10px;
 }
 
 .stat-item p {
     font-size: 1rem;
-    color: #666;
+    color: #475569;
     font-weight: 500;
 }
 
@@ -1751,10 +1774,20 @@ body {
 }
 
 .presentation-card {
-    background: white;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.98) 0%, rgba(204, 251, 241, 0.98) 100%);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.presentation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.3);
+    border-color: rgba(20, 184, 166, 0.4);
+}
     transition: transform 0.3s ease;
 }
 
@@ -1814,10 +1847,21 @@ body {
 }
 
 .course-item {
-    background: white;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.98) 0%, rgba(204, 251, 241, 0.98) 100%);
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.3);
+    border-color: rgba(20, 184, 166, 0.4);
+}
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -1868,10 +1912,20 @@ body {
 }
 
 .teaching-card {
-    background: white;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.98) 0%, rgba(204, 251, 241, 0.98) 100%);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.teaching-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.3);
+    border-color: rgba(20, 184, 166, 0.4);
+}
     transition: transform 0.3s ease;
 }
 

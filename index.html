@@ -84,7 +84,7 @@
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
-                <img src="images/title_icon.png" alt="Logo" class="logo-icon">
+                <img src="images/title_icon_white.png" alt="Logo" class="logo-icon">
                 <span>MoJa Ardestani</span>
             </div>
             <div class="affiliation">
@@ -1161,10 +1161,12 @@
                 selectedTab.classList.add('active');
             }
 
-            // Add active class to clicked sidebar link
-            const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
+            // Add active class to clicked sidebar link (but not to 'experience' parent)
+            if (tabName !== 'experience') {
+                const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
             }
 
             // Scroll to top of the page for better user experience
@@ -1248,10 +1250,8 @@
                     e.preventDefault();
                     const tabName = this.getAttribute('data-tab');
 
-                    // If it's the experience tab, don't change tabs, just show the first sub-tab
+                    // If it's the experience tab, only toggle dropdown, don't navigate
                     if (tabName === 'experience') {
-                        showTab('experience');
-                        showExperienceSubTab('professional-experience');
                         toggleSidebarDropdown(this);
                     } else {
                         showTab(tabName);
@@ -1265,6 +1265,11 @@
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const subTabName = this.getAttribute('data-tab');
+                    
+                    // First, show the experience tab
+                    showTab('experience');
+                    
+                    // Then show the selected sub-tab
                     showExperienceSubTab(subTabName);
                 });
             });
